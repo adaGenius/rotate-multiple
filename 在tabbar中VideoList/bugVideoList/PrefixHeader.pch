@@ -1,0 +1,41 @@
+//
+//  PrefixHeader.pch
+//  bugVideoList
+//
+//  Created by jiangbao on 2020/6/4.
+//  Copyright © 2020 jiangbao. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+#import "Masonry.h"
+#import "AFNetworking.h"
+#import <PLPlayerKit/PLPlayerKit.h>
+#import "PLPlayerView.h"
+#import "UIImageView+WebCache.h"
+#import "UIView+Alert.h"
+#import "UIButton+Animate.h"
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define kWeakSelf(type) __weak typeof(type) weak##type = type;
+#define kStrongSelf(type) __strong typeof(type) type = weak##type;
+ 
+#ifndef dispatch_main_async_safe
+#define dispatch_main_async_safe(block) dispatch_queue_async_safe(dispatch_get_main_queue(), block)
+#endif
+ #ifndef ARRAY_SIZE
+     #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof(arr[0]))
+ #endif
+//#ifndef dispatch_main_async_safe
+//#define dispatch_main_async_safe(block) dispatch_queue_async_safe(dispatch_get_main_queue(), block)
+//#endif
+
+typedef void(^tapBlock)(id);

@@ -1,0 +1,13 @@
+
+platform :ios, '9.0'
+target 'bugVideoList' do
+  pod 'AFNetworking', '3.1.0'
+  pod 'PLPlayerKit'
+  pod 'Masonry'
+  pod 'MJExtension'
+  pod 'SDWebImage', '4.0'
+  pod "PLPlayerKit"
+  pod 'JGProgressHUD'
+#  pod 'MMMaterialDesignSpinner'
+end
+
